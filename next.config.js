@@ -4,8 +4,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "lh3.googleusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "play-lh.googleusercontent.com",
+      }
     ],
   },
   experimental: {
