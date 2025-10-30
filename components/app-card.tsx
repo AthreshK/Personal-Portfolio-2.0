@@ -8,9 +8,10 @@ interface AppCardProps {
   imageUrl: any;
   downloads: string;
   rating: string;
+  subtitle: string;
 }
 
-const AppCard: React.FC<AppCardProps> = ({ title, imageUrl, downloads, rating }) => {
+const AppCard: React.FC<AppCardProps> = ({ title, subtitle, imageUrl, downloads, rating }) => {
   return (
     <div className="group p-2 flex-shrink-0">
       <section className="bg-white bg-opacity-20 backdrop-blur-sm border border-white/30 rounded-lg shadow-lg w-40 h-38 relative hover:scale-105 transition-transform flex flex-col items-center justify-center p-4 dark:bg-gray-950 dark:bg-opacity-75 dark:border-white/10">
@@ -18,7 +19,7 @@ const AppCard: React.FC<AppCardProps> = ({ title, imageUrl, downloads, rating })
           <Image src={imageUrl} alt={`${title} logo`} fill style={{ objectFit: 'contain' }} />
         </div>
         <div className="text-sm font-semibold text-center mb-2">{title}</div>
-        <div className="text-xs text-center mb-2 text-gray-400">LMS</div>
+        <div className="text-xs text-center mb-2 text-gray-400">{subtitle}</div>
         <div className="flex justify-around w-full text-xs">
           <div className="flex items-center">
             <FiDownload className="mr-1" />

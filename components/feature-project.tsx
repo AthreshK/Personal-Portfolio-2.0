@@ -62,7 +62,6 @@ export default function FeaturedProject({
   return (
     <motion.div
       ref={ref}
-      // variants={containerVariants}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,

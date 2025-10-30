@@ -1,8 +1,10 @@
 import About from "@/components/about";
+import Articles from "@/components/articles";
 import Contact from "@/components/contact";
+import Education from "@/components/education";
 import Experience from "@/components/experience";
 import Intro from "@/components/intro";
-import Projects from "@/components/projects";
+import Work from "@/components/work";
 import Skills from "@/components/skills";
 
 export default function Home() {
@@ -11,9 +13,11 @@ export default function Home() {
       <Intro />
       <About />
       <Skills />
-      <Projects />
+      <Work />
       <Experience />
-      <Contact />
+      <Education />
+      <Articles />
+      {/* <Contact /> */}
     </main>
   );
 }

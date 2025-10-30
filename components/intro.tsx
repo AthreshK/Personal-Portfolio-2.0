@@ -4,8 +4,18 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsEnvelope, BsLinkedin, BsMailbox } from "react-icons/bs";
-import { HiDocument, HiDownload, HiOutlineMail, HiViewGrid } from "react-icons/hi";
+import {
+  BsArrowRight,
+  BsEnvelope,
+  BsLinkedin,
+  BsMailbox,
+} from "react-icons/bs";
+import {
+  HiDocument,
+  HiDownload,
+  HiOutlineMail,
+  HiViewGrid,
+} from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -14,22 +24,40 @@ import { displayPictureData, introData, socialLinks } from "@/lib/data";
 export default function Intro() {
   const { ref } = useSectionInView("Home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
+  const fade_in_variant = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+      filter: "blur(4px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
-    <section
+    <motion.section
       ref={ref}
       id="home"
       className="max-w-[50rem] text-center scroll-mt-36"
+      initial="hidden"
+      animate="visible"
+      variants={fade_in_variant}
     >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
+          // initial={{ opacity: 0, scale: 0 }}
+          // animate={{ opacity: 1, scale: 1 }}
+          // transition={{
+          //   type: "tween",
+          //   duration: 0.2,
+          // }}
           >
             <Image
               src={displayPictureData.src}
@@ -38,7 +66,7 @@ export default function Intro() {
               height="300"
               quality="95"
               priority={true}
-              className="h-40 w-40 rounded-full object-cover object-top border-[0.35rem] border-white shadow-xl"
+              className="h-40 w-40 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
           {/* <motion.span
@@ -65,13 +93,13 @@ export default function Intro() {
         <span className="font-bold">{introData.name}</span>
       </motion.h1>
       <motion.h2
-        className="mb-10 px-4 text-xl font-medium leading-8 sm:text-2xl sm:leading-8" 
+        className="mb-10 px-4 text-xl font-medium leading-8 sm:text-2xl sm:leading-8"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.05,
         }}
-      > 
+      >
         {introData.title}
         <br />
         {introData.roleTitle}
@@ -129,6 +157,6 @@ export default function Intro() {
           <FaGithubSquare />
         </Link>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
