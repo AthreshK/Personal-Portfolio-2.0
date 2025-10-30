@@ -9,7 +9,7 @@ export default function Articles() {
   const { ref } = useSectionInView("Articles", 0.5);
 
   return (
-    <section ref={ref} id="articles" className="scroll-mt-28 mb-28">
+    <section ref={ref} id="articles" className="scroll-mt-28 mb-28 max-w-[55rem]">
       <SectionHeading>Have a read</SectionHeading>
       <div className="flex flex-wrap justify-start gap-4">
         {articlesData.map((article, index) => (
