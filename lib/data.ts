@@ -1,16 +1,14 @@
 import React from "react";
 import { FaCode, FaGamepad, FaHospitalUser, FaReact } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
+import { Link, Article , SectionName , DisplayPictureData , IntroData , SocialLink , FeaturedProjectData , AppData , EducationData , Experience } from "./types";
 
 export const pageMetaData = {
   title: "Athresh | Personal Portfolio",
   description:
     "Founding Engineer & Mobile SDE with 4 years of experience specializing in Full-Stack, Mobile, AI & Cloud Engineering",
 };
-interface Link {
-  name: string;
-  hash: string;
-}
+
 export const links = [
   {
     name: "Home",
@@ -46,12 +44,6 @@ export const links = [
   // },
 ] as const satisfies readonly Link[];
 
-interface Article {
-  title: string;
-  link: string;
-  source: string;
-}
-
 export const articlesData = [
   {
     title:
@@ -71,20 +63,11 @@ export const articlesData = [
   },
 ] as const satisfies readonly Article[];
 
-interface DisplayPictureData {
-  src: string;
-  alt: string;
-}
 export const displayPictureData = {
   src: "/headshot.jpg",
   alt: "Athresh portrait",
 } as const satisfies DisplayPictureData;
 
-interface IntroData {
-  name: string;
-  title: string;
-  roleTitle: string;
-}
 
 export const introData = {
   name: "Athresh Kiran",
@@ -92,14 +75,10 @@ export const introData = {
   roleTitle: "Flutter, Cloud & AI-driven Solutions",
 } as const satisfies IntroData;
 
-interface SocialLink {
-  name: string;
-  url: string;
-}
 export const socialLinks = [
   {
     name: "Email",
-    url: "athreshkiran@example.com",
+    url: "athresh.kiran@gmail.com",
   },
   {
     name: "LinkedIn",
@@ -107,7 +86,7 @@ export const socialLinks = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/athreshkiran",
+    url: "https://github.com/AthreshK",
   },
 ] as const satisfies readonly SocialLink[];
 
@@ -141,17 +120,6 @@ export const toolsAndMethods = [
   "Agile & Scrum",
 ] as const satisfies readonly string[];
 
-interface FeaturedProjectData {
-  logo: string;
-  title: string;
-  subtitle: string;
-  summary: string;
-  metrics: {
-    value: number;
-    label: string;
-  }[];
-  techStack: string[];
-}
 export const featuredProjectsData = [
   {
     logo: "https://play-lh.googleusercontent.com/52wPuftZtLd5lQWeJEmP3JZZPacgXmOGyp38x2lCXKeZEOxrTMK6nOWv1LCmc_yI8ulzwwtwweMMsakZBZB-1g=w240-h480-rw",
@@ -211,13 +179,6 @@ export const featuredProjectsData = [
   },
 ] as const satisfies readonly FeaturedProjectData[];
 
-interface AppData {
-  title: string;
-  subtitle: string;
-  imageUrl: string;
-  downloads: string;
-  rating: string;
-}
 export const appsData = [
   {
     //topstory.fiction.novel
@@ -315,15 +276,6 @@ export const appsData = [
   },
 ] as const satisfies readonly AppData[];
 
-interface EducationData {
-  logo: string;
-  degree: string;
-  university: string;
-  summary: string;
-  gpa: string;
-  courses: string[];
-}
-
 export const educationData = [
   {
     logo: "/uw-logo.png",
@@ -354,14 +306,6 @@ export const educationData = [
     ],
   },
 ] as const satisfies readonly EducationData[];
-
-interface Experience {
-  title: string;
-  location: string;
-  description: string[];
-  icon: React.ReactElement;
-  date: string; // optional
-}
 
 export const experiencesData = [
   {
