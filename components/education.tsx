@@ -5,11 +5,9 @@ import { useSectionInView } from "@/lib/hooks";
 import { educationData } from "@/lib/data";
 import Image from "next/image";
 import SectionHeading from "./section-heading";
-import { track } from "@vercel/analytics";
 
 export default function Education() {
   const { ref } = useSectionInView("Education", 1);
-  track('Education Viewed');
 
   return (
     <section ref={ref} id="education" className="scroll-mt-32">

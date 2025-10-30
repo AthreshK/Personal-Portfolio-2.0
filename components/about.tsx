@@ -5,11 +5,9 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { aboutMeData } from "@/lib/data";
-import { track } from "@vercel/analytics";
 
 export default function About() {
   const { ref } = useSectionInView("About");
-  track('About Viewed');
 
   return (
     <motion.section

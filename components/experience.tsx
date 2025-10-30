@@ -10,13 +10,11 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
-import { track } from "@vercel/analytics";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience", 0.2);
   const { theme } = useTheme();
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-  track('Experience Viewed');
 
   useEffect(() => {
     if (typeof window === "undefined") return;
