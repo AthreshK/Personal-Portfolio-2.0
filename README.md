@@ -6,7 +6,7 @@ A personal portfolio website to showcase my projects, skills, and experience.
 
 ## About This Project
 
-This repository contains the source code for my personal portfolio website. It's a modern, single-page application designed to provide a comprehensive overview of my professional background, technical abilities, and the work I'm passionate about.
+This repository contains the source code for my personal portfolio website. It's a modern, single-page application designed as a template for an application developer, providing a comprehensive overview of my professional background, technical abilities, and the work I'm passionate about.
 
 Feel free to fork this repository to use as a template for your own portfolio. The site is fully responsive, built with a performance first mindset, and includes a light/dark mode theme switcher.
 
