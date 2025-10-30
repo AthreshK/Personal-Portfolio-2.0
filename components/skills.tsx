@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { coreExpertise, proficientWith, toolsAndMethods } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -45,7 +46,7 @@ const SkillSection = ({ title, skills }: { title: string; skills: readonly strin
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
-
+  track('Skills Viewed');
   return (
     <section
       id="skills"

@@ -20,7 +20,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { displayPictureData, introData, socialLinks } from "@/lib/data";
-import toast from "react-hot-toast";
+import { track } from "@vercel/analytics";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
@@ -116,7 +116,7 @@ export default function Intro() {
         <div
           className="cursor-pointer group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
-            // Open a website link
+            track('Contact Me Clicked');
             window.location.href = `mailto:${socialLinks[0].url}?subject=Reaching out from your portfolio website`;
           }}
         >
@@ -128,6 +128,9 @@ export default function Intro() {
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="https://drive.google.com/file/d/1tKUAcYz196RbRKLTpNMnl0CYZ_yzpIP3"
           download
+          onClick={() => {
+            track('Resume Viewed');
+          }}
         >
           View Resume
           <HiDocument className="group-hover:-translate-y-1 transition" />

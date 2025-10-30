@@ -7,11 +7,12 @@ import { featuredProjectsData, appsData } from "@/lib/data";
 import AppCard from "./app-card";
 
 import { motion } from "framer-motion";
-import { Section } from "@react-email/components";
 import SectionHeading from "./section-heading";
+import { track } from "@vercel/analytics";
 
 export default function Work() {
   const { ref } = useSectionInView("Featured Work", 0.35);
+  track('Featured Work Viewed');
 
   return (
     <section ref={ref} id="work" className="scroll-mt-32">
