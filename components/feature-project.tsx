@@ -68,7 +68,7 @@ export default function FeaturedProject({
       }}
       initial="hidden"
       animate={controls}
-      className="w-full md:w-1/2 p-3"
+      className="w-full md:w-1/2 p-0 py-3 md:px-3"
     >
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md h-full flex flex-col">
         <div className="flex items-center mb-3">

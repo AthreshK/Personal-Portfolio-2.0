@@ -151,7 +151,7 @@ export const featuredProjectsData = [
   },
   {
     logo: "/EMA_logo.jpg",
-    title: "Architecting from 0-to-1",
+    title: "Architecting 0-to-1",
     subtitle: "EMA | Parallel Reality",
     summary:
       "Architected an NHS-partnered health-tech app from concept to launch, leading mobile strategy, AWS backend, and core AI feature development.",

@@ -66,7 +66,7 @@ export default function Experience() {
                 </h3>
                 <p className="text-lg font-semibold !mt-1">{item.location}</p>
               </div>
-              <ul className="list-disc pl-6 mt-2">
+              <ul className="list-disc md:pl-6 mt-2">
                 {item.description.map((point, idx) => (
                   <li key={idx} className="mb-2 text-sm dark:text-white/75">
                     {point}
