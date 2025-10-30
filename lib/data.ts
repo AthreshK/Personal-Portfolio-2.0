@@ -11,7 +11,7 @@ interface Link {
   name: string;
   hash: string;
 }
-export const links: Link[] = [
+export const links = [
   {
     name: "Home",
     hash: "#home",
@@ -44,7 +44,7 @@ export const links: Link[] = [
   //   name: "Contact",
   //   hash: "#contact",
   // },
-] as const;
+] as const satisfies readonly Link[];
 
 interface Article {
   title: string;
@@ -52,9 +52,10 @@ interface Article {
   source: string;
 }
 
-export const articlesData: Article[] = [
+export const articlesData = [
   {
-    title: "SimplyMime: A Dynamic Gesture Recognition and Authentication System for Smart Remote Control",
+    title:
+      "SimplyMime: A Dynamic Gesture Recognition and Authentication System for Smart Remote Control",
     link: "https://ieeexplore.ieee.org/abstract/document/10742306",
     source: "IEEE",
   },
@@ -68,31 +69,34 @@ export const articlesData: Article[] = [
     link: "https://medium.com/@athresh.kiran/my-40-day-vegetarian-keto-journey-e9540c571efd",
     source: "Medium",
   },
-] as const;
+] as const satisfies readonly Article[];
+
 interface DisplayPictureData {
   src: string;
   alt: string;
 }
-export const displayPictureData: DisplayPictureData = {
+export const displayPictureData = {
   src: "/headshot.jpg",
   alt: "Athresh portrait",
-} as const;
+} as const satisfies DisplayPictureData;
+
 interface IntroData {
   name: string;
   title: string;
   roleTitle: string;
 }
-export const introData: IntroData = {
+
+export const introData = {
   name: "Athresh Kiran",
   title: "Mobile SDE & Founding Engineer",
   roleTitle: "Flutter, Cloud & AI-driven Solutions",
-} as const;
+} as const satisfies IntroData;
 
 interface SocialLink {
   name: string;
   url: string;
 }
-export const socialLinks: SocialLink[] = [
+export const socialLinks = [
   {
     name: "Email",
     url: "athreshkiran@example.com",
@@ -105,37 +109,37 @@ export const socialLinks: SocialLink[] = [
     name: "GitHub",
     url: "https://github.com/athreshkiran",
   },
-] as const;
+] as const satisfies readonly SocialLink[];
 
-export const aboutMeData: string[] = [
+export const aboutMeData = [
   "I'm a software engineer with over **4 years of experience**, now pursuing my MS in Computer Science at the University of Washington (Graduating June 2026).",
   "My journey has given me a deep understanding of the entire product lifecycle, from **building from zero** to engineering for **massive scale**. As a Founding Engineer, I innovated a **patent-pending** computer vision algorithm and **architected** the mobile product for an NHS-partnered application. Later, at Junglee Games, I owned the development of **high-throughput** payment systems and core features for an 80M+ user gaming platform. This is where I mastered high-performance engineering in a complex, live environment",
   "I'm now seeking an **SDE 2** role where I can combine both sides of my experience, architecture and optimization, to build impactful, scalable solutions",
-] as const;
+] as const satisfies readonly string[];
 
-export const coreExpertise: string[] = [
+export const coreExpertise = [
   "Flutter",
   "Android (Java & Kotlin)",
   "iOS (Swift)",
   "AWS (Serverless, S3)",
   "Google Firebase",
-] as const;
+] as const satisfies readonly string[];
 
-export const proficientWith: string[] = [
+export const proficientWith = [
   "Python",
   "TypeScript",
   "TensorFlow",
   "React.js",
   "MongoDB",
-] as const;
+] as const satisfies readonly string[];
 
-export const toolsAndMethods: string[] = [
+export const toolsAndMethods = [
   "CI/CD",
   "Docker",
   "Computer Vision",
   "Payment Integration",
   "Agile & Scrum",
-] as const;
+] as const satisfies readonly string[];
 
 interface FeaturedProjectData {
   logo: string;
@@ -148,7 +152,7 @@ interface FeaturedProjectData {
   }[];
   techStack: string[];
 }
-export const featuredProjectsData: FeaturedProjectData[] = [
+export const featuredProjectsData = [
   {
     logo: "https://play-lh.googleusercontent.com/52wPuftZtLd5lQWeJEmP3JZZPacgXmOGyp38x2lCXKeZEOxrTMK6nOWv1LCmc_yI8ulzwwtwweMMsakZBZB-1g=w240-h480-rw",
     title: "Engineering at Scale",
@@ -205,7 +209,7 @@ export const featuredProjectsData: FeaturedProjectData[] = [
       "AWS Lambda",
     ],
   },
-] as const;
+] as const satisfies readonly FeaturedProjectData[];
 
 interface AppData {
   title: string;
@@ -214,7 +218,7 @@ interface AppData {
   downloads: string;
   rating: string;
 }
-export const appsData: AppData[] = [
+export const appsData = [
   {
     //topstory.fiction.novel
     title: "Fictio",
@@ -309,7 +313,16 @@ export const appsData: AppData[] = [
     downloads: "1K+",
     rating: "4.5",
   },
- ] as const;
+] as const satisfies readonly AppData[];
+
+interface EducationData {
+  logo: string;
+  degree: string;
+  university: string;
+  summary: string;
+  gpa: string;
+  courses: string[];
+}
 
 export const educationData = [
   {
@@ -340,16 +353,17 @@ export const educationData = [
       "Compiler Design",
     ],
   },
-] as const;
+] as const satisfies readonly EducationData[];
 
 interface Experience {
   title: string;
-  location?: string;
+  location: string;
   description: string[];
   icon: React.ReactElement;
   date: string; // optional
 }
-export const experiencesData: Experience[] = [
+
+export const experiencesData = [
   {
     title: "Software Development Engineer",
     location: "Junglee Games",
@@ -377,6 +391,7 @@ export const experiencesData: Experience[] = [
   },
   {
     title: "Full Stack Mobile Developer & Consultant",
+    location: "",
     description: [
       "Delivered 12+ full-stack mobile applications from concept to launch on the App Store and Google Play, accumulating over 150,000+ total downloads",
       "Enhanced UX and functionality for a portfolio of apps across E-commerce and EdTech, achieving an average 25% improvement in user retention and boosting average app store ratings to 4.7/5 stars",
@@ -393,4 +408,4 @@ export const experiencesData: Experience[] = [
     icon: React.createElement(PiStudentFill),
     date: "Jul 2021 - Dec 2023",
   },
-] as const;
+] as const satisfies readonly Experience[];
