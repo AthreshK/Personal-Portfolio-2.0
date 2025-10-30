@@ -6,7 +6,7 @@ import { articlesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Articles() {
-  const { ref } = useSectionInView("Articles", 0.5);
+  const { ref } = useSectionInView("Articles", 1);
 
   return (
     <section ref={ref} id="articles" className="scroll-mt-28 mb-28 max-w-[55rem]">
@@ -16,9 +16,7 @@ export default function Articles() {
           <a
             key={index}
             href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-100 text-gray-800 text-lg font-medium px-4 py-2 rounded-lg hover:bg-gray-200 dark:bg-white/10 dark:text-white/80 dark:hover:bg-white/20 transition-all duration-200"
+            className="bg-gray-100 text-gray-800 md:text-lg font-medium px-4 py-2 rounded-lg hover:bg-gray-200 dark:bg-white/10 dark:text-white/80 dark:hover:bg-white/20 transition-all duration-200"
           >
             <strong>{article.source}: </strong> {article.title}
           </a>

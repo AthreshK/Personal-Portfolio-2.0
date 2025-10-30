@@ -24,7 +24,6 @@ import toast from "react-hot-toast";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const fade_in_variant = {
     hidden: {
       opacity: 0,
@@ -87,14 +86,14 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-8 mt-6 text-3xl font-medium sm:text-4xl"
+        className="mb-8 mt-6 text-2xl font-medium sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">{introData.name}</span>
       </motion.h1>
       <motion.h2
-        className="mb-10 px-4 text-xl font-medium leading-8 sm:text-2xl sm:leading-8"
+        className="mb-10 px-4 text-lg font-medium leading-8 sm:text-2xl sm:leading-8"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -117,17 +116,8 @@ export default function Intro() {
         <div
           className="cursor-pointer group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
-            navigator.clipboard.writeText(socialLinks[0].url);
-            toast.success(
-              "athresh.kiran@gmail.com was copied to your clipboard!",
-              {
-                position: "bottom-center",
-                duration: 3000,
-                style: {
-                  textAlign: "center",
-                },
-              }
-            );
+            // Open a website link
+            window.location.href = `mailto:${socialLinks[0].url}?subject=Reaching out from your portfolio website`;
           }}
         >
           Contact me

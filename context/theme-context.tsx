@@ -45,6 +45,10 @@ export default function ThemeContextProvider({
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }
+    else{
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+    }
   }, []);
 
   return (

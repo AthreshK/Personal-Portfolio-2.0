@@ -92,7 +92,7 @@ export const socialLinks = [
 
 export const aboutMeData = [
   "I'm a software engineer with over **4 years of experience**, now pursuing my MS in Computer Science at the University of Washington (Graduating June 2026).",
-  "My journey has given me a deep understanding of the entire product lifecycle, from **building from zero** to engineering for **massive scale**. As a Founding Engineer, I innovated a **patent-pending** computer vision algorithm and **architected** the mobile product for an NHS-partnered application. Later, at Junglee Games, I owned the development of **high-throughput** payment systems and core features for an 80M+ user gaming platform. This is where I mastered high-performance engineering in a complex, live environment",
+  "My journey has given me a deep understanding of the entire product lifecycle, from **building products from zero** to engineering for **massive scale**. As a Founding Engineer, I innovated a **patent-pending** computer vision algorithm and **architected** the mobile product for an NHS-partnered application. Later, at Junglee Games, I owned the development of **high-throughput** payment systems and core features for an 80M+ user gaming platform. This is where I mastered high-performance engineering in a complex, live environment",
   "I'm now seeking an **SDE 2** role where I can combine both sides of my experience, architecture and optimization, to build impactful, scalable solutions",
 ] as const satisfies readonly string[];
 
@@ -122,7 +122,7 @@ export const toolsAndMethods = [
 
 export const featuredProjectsData = [
   {
-    logo: "https://play-lh.googleusercontent.com/52wPuftZtLd5lQWeJEmP3JZZPacgXmOGyp38x2lCXKeZEOxrTMK6nOWv1LCmc_yI8ulzwwtwweMMsakZBZB-1g=w240-h480-rw",
+    logo: "/junglee-rummy.webp",
     title: "Engineering at Scale",
     subtitle: "Junglee Rummy | Junglee Games",
     summary:

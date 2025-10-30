@@ -7,7 +7,7 @@ import Image from "next/image";
 import SectionHeading from "./section-heading";
 
 export default function Education() {
-  const { ref } = useSectionInView("Education", 0.35);
+  const { ref } = useSectionInView("Education", 1);
 
   return (
     <section ref={ref} id="education" className="scroll-mt-32">
@@ -36,7 +36,7 @@ export default function Education() {
                   />
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
                     {education.degree}
                   </h2>
                   <p className="text-md text-gray-500 dark:text-gray-400">

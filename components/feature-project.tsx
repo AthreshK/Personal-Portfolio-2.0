@@ -30,7 +30,7 @@ const NumberAnimation = ({ value }: { value: number }) => {
     }
   }, [isInView, value]);
 
-  return <span ref={ref}>0</span>;
+  return <span ref={ref}>{value}</span>;
 };
 
 export default function FeaturedProject({
@@ -76,10 +76,10 @@ export default function FeaturedProject({
             <Image src={logo} alt={`${title} logo`} fill style={{ objectFit: 'contain' }} />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
               {title}
             </h2>
-            <p className="text-md text-gray-500 dark:text-gray-400">
+            <p className="text-sm md:text-md text-gray-500 dark:text-gray-400">
               {subtitle}
             </p>
           </div>
@@ -90,12 +90,12 @@ export default function FeaturedProject({
         <div className="mb-4">
           {metrics.map((metric, index) => (
             <div key={index} className="flex items-center py-1">
-              <h3 className="text-2xl font-bold text-gray-400 dark:text-white">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-400 dark:text-white">
                 <NumberAnimation value={metric.value} />
                 {metric.label.includes('+') && '+'}
                 {metric.label.includes('%') && '%'}
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 ml-2">
+              <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 ml-2">
                 {metric.label.replace('+', '').replace('%', '')}
               </p>
             </div>
