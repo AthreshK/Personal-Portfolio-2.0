@@ -7,7 +7,7 @@ import Image from "next/image";
 import SectionHeading from "./section-heading";
 
 export default function Education() {
-  const { ref } = useSectionInView("Education", 1);
+  const { ref } = useSectionInView("Education", 0.75);
 
   return (
     <section ref={ref} id="education" className="scroll-mt-32">
