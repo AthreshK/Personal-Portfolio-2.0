@@ -1,12 +1,23 @@
 import React from "react";
 import { FaCode, FaGamepad, FaHospitalUser, FaReact } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
-import { Link, Article , SectionName , DisplayPictureData , IntroData , SocialLink , FeaturedProjectData , AppData , EducationData , Experience } from "./types";
+import {
+  Link,
+  Article,
+  SectionName,
+  DisplayPictureData,
+  IntroData,
+  SocialLink,
+  FeaturedProjectData,
+  AppData,
+  EducationData,
+  Experience,
+} from "./types";
 
 export const pageMetaData = {
   title: "Athresh | Personal Portfolio",
   description:
-    "Founding Engineer & Mobile SDE with 4 years of experience specializing in Full-Stack, Mobile, AI & Cloud Engineering",
+    "Founding Engineer & Mobile Software Engineer with 4 years of experience specializing in Full-Stack, Mobile, AI & Cloud Engineering",
 };
 
 export const links = [
@@ -68,11 +79,10 @@ export const displayPictureData = {
   alt: "Athresh portrait",
 } as const satisfies DisplayPictureData;
 
-
 export const introData = {
   name: "Athresh Kiran",
-  title: "Mobile SDE & Founding Engineer",
-  roleTitle: "Flutter, Cloud & AI-driven Solutions",
+  title: "Mobile Software Engineer & Founding Engineer",
+  roleTitle: "Client Systems, Cloud & AI-Powered Platforms",
 } as const satisfies IntroData;
 
 export const socialLinks = [
@@ -91,9 +101,9 @@ export const socialLinks = [
 ] as const satisfies readonly SocialLink[];
 
 export const aboutMeData = [
-  "I'm a software engineer with over **4 years of experience**, now pursuing my MS in Computer Science at the University of Washington (Graduating June 2026).",
-  "My journey has given me a deep understanding of the entire product lifecycle, from **building products from zero** to engineering for **massive scale**. As a Founding Engineer, I innovated a **patent-pending** computer vision algorithm and **architected** the mobile product for an NHS-partnered application. Later, at Junglee Games, I owned the development of **high-throughput** payment systems and core features for an 80M+ user gaming platform. This is where I mastered high-performance engineering in a complex, live environment",
-  "I'm now seeking an **SDE 2** role where I can combine both sides of my experience, architecture and optimization, to build impactful, scalable solutions",
+  "I'm a software engineer with over **4 years of experience**, currently pursuing my MS in Computer Science at the University of Washington (graduating June 2026).",
+  "My journey has given me a deep understanding of the full product lifecycle, from **building products from the ground up** to engineering systems for **massive scale**. As a Founding Engineer, I developed a **patent-pending** computer vision algorithm and **architected** the mobile platform for an NHS-partnered healthcare application. Later, at Junglee Games, I owned **high-throughput** client-side payment flows and core product systems supporting an 80M+ user gaming platform, where I honed high-performance engineering in complex, live environments.",
+  "I'm now focused on **SDE 2** opportunities where I can apply both architectural ownership and performance optimization to build scalable, reliable systems.",
 ] as const satisfies readonly string[];
 
 export const coreExpertise = [
@@ -312,23 +322,23 @@ export const experiencesData = [
     title: "Software Development Engineer",
     location: "Junglee Games",
     description: [
-      "Engineered and optimized core features for a Flutter-based gaming application, scaling to support 80M+ users on both Android and iOS platforms.",
-      "Owned the development of an express payment system by redesigning the transaction flow, which slashed average transaction times by 40% and enhanced user experience.",
-      'Architected and launched a dynamic user onboarding flow and a "Challenger" game mode, directly contributing to a 25% increase in user retention',
-      "Led a cross-functional initiative to integrate Amazon Pay as a new payment option, resulting in a 60% surge in wallet-based transactions in the first quarter of deployment (Q2 2024)",
-      "Championed and established new architectural guidelines and clean code standards, reducing technical debt and accelerating new feature release cycles by 20% while simultaneously mentoring 2 fellow engineers on best practices",
+      "Developed and optimized high-traffic Flutter client components used by 80M+ users, focusing on performance, stability, and correctness across Android and iOS.",
+      "Owned and implemented client-side architecture for an express payment flow, redesigning transaction state handling and API coordination to reduce end-to-end checkout time by 40%.",
+      "Led cross-functional integration of Amazon Pay into the mobile wallet experience, coordinating client changes and backend contracts to drive a 60% increase in wallet transactions",
+      "Improved mobile codebase maintainability through architectural guardrails and targeted refactors, reducing release friction and improving delivery velocity by 20%",
     ],
     icon: React.createElement(FaGamepad),
     date: "Dec 2023 - Aug 2024",
   },
   {
-    title: "Founding Engineer & Mobile SDE",
+    title: "Founding Engineer - Mobile & Client Systems",
     location: "Parallel Reality",
     description: [
-      "Spearheaded mobile engineering for an NHS-partnered health-tech application from ground up, delivering remote patient monitoring and care management tools to over 5,000+ users",
-      "Innovated a patent-pending computer vision and deep learning algorithm for real-time on device exercise tracking, which improved patient engagement and data accuracy by 35%",
-      "Architected and implemented scalable REST APIs using AWS Lambda and MongoDB to support seamless data synchronization between mobile clients and a React.js patient management dashboard.",
-      "Led the strategic migration of separate native Android and iOS codebases to a unified Flutter framework, cutting future development time by 40% and improving feature parity.",
+      " Founding engineer responsible for end-to-end mobile architecture of an NHS-partnered healthcare platform, leading client systems from initial 0 to 1 development through production scale.",
+      " Built and maintained native Android (Java) and iOS (Swift) applications before leading the migration to a unified Flutter architecture, improving feature parity and significantly reducing long-term development overhead.",
+      " Designed and implemented on-device processing pipelines for real-time exercise tracking, posture assessment, and environment calibration, combining ML-based pose detection with custom mathematical logic and multithreaded execution (multithreading and concurrency) to ensure accuracy and performance on mobile devices",
+      " Built complex, stateful mobile experiences including guided workout flows, timers, and live feedback loops, while ensuring correctness under app lifecycle changes, background execution, and network interruptions.",
+      " Designed and implemented serverless backend APIs and healthcare delivery features (AWS Lambda, MongoDB, VoIP consultations, clinician dashboards), integrating mobile clients with cloud systems and backend services.",
     ],
     icon: React.createElement(FaHospitalUser),
     date: "Jul 2021 - Dec 2023",
