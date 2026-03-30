@@ -59,3 +59,17 @@ export interface Article {
   link: string;
   source: string;
 }
+
+export interface ProjectData {
+  title: string;
+  description: string;
+  link?: string;
+  tags: readonly string[];
+  status?: string;
+}
+
+export interface AwardData {
+  title: string;
+  org: string;
+  year: string;
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import { FaCode, FaGamepad, FaHospitalUser, FaReact } from "react-icons/fa";
-import { PiStudentFill } from "react-icons/pi";
 import {
   Link,
   Article,
@@ -12,6 +11,8 @@ import {
   AppData,
   EducationData,
   Experience,
+  ProjectData,
+  AwardData,
 } from "./types";
 
 export const pageMetaData = {
@@ -103,31 +104,35 @@ export const socialLinks = [
 export const aboutMeData = [
   "I'm a software engineer with over **4 years of experience**, currently pursuing my MS in Computer Science at the University of Washington (graduating June 2026).",
   "My journey has given me a deep understanding of the full product lifecycle, from **building products from the ground up** to engineering systems for **massive scale**. As a Founding Engineer, I developed a **patent-pending** computer vision algorithm and **architected** the mobile platform for an NHS-partnered healthcare application. Later, at Junglee Games, I owned **high-throughput** client-side payment flows and core product systems supporting an 80M+ user gaming platform, where I honed high-performance engineering in complex, live environments.",
-  "I'm now focused on **SDE 2** opportunities where I can apply both architectural ownership and performance optimization to build scalable, reliable systems.",
 ] as const satisfies readonly string[];
 
 export const coreExpertise = [
   "Flutter",
-  "Android (Java & Kotlin)",
-  "iOS (Swift)",
-  "AWS (Serverless, S3)",
-  "Google Firebase",
+  "Android (Native)",
+  "iOS (Native)",
+  "Kotlin",
+  "Swift",
+  "Dart",
+  "Java",
 ] as const satisfies readonly string[];
 
 export const proficientWith = [
   "Python",
   "TypeScript",
-  "TensorFlow",
-  "React.js",
+  "AWS Lambda",
+  "Firebase",
   "MongoDB",
+  "REST APIs",
+  "Supabase",
 ] as const satisfies readonly string[];
 
 export const toolsAndMethods = [
+  "On-device ML",
+  "Multithreading",
+  "Real-time Processing",
+  "Computer Vision",
   "CI/CD",
   "Docker",
-  "Computer Vision",
-  "Payment Integration",
-  "Agile & Scrum",
 ] as const satisfies readonly string[];
 
 export const featuredProjectsData = [
@@ -171,12 +176,12 @@ export const featuredProjectsData = [
         label: "% Cut in Dev Time through Flutter Migration",
       },
       {
-        value: 35,
-        label: "% Boost in Patient Engagement",
+        value: 90,
+        label: "% Accurate On Device AI Pipeline and Algorithm",
       },
       {
-        value: 1,
-        label: "Patent-Pending On Device AI Algorithm",
+        value: 10,
+        label: "+ Clinics Served via Healthcare Platform",
       },
     ],
     techStack: [
@@ -293,7 +298,7 @@ export const educationData = [
     university: "University of Washington",
     summary:
       "Graduate Teaching Assistant for CSE, Instructed and mentored 500+ undergraduate students in core Java and Object-Oriented Programming principles through courses like Computer Programming I & II",
-    gpa: "3.85",
+    gpa: "3.77",
     courses: [
       "Deep Learning and AI",
       "High Performance Computing",
@@ -322,10 +327,11 @@ export const experiencesData = [
     title: "Software Development Engineer",
     location: "Junglee Games",
     description: [
-      "Developed and optimized high-traffic Flutter client components used by 80M+ users, focusing on performance, stability, and correctness across Android and iOS.",
+      "Built and scaled high-traffic Flutter client systems used by 80M+ users, focusing on performance, stability, monitoring, and correctness across Android and iOS.",
       "Owned and implemented client-side architecture for an express payment flow, redesigning transaction state handling and API coordination to reduce end-to-end checkout time by 40%.",
-      "Led cross-functional integration of Amazon Pay into the mobile wallet experience, coordinating client changes and backend contracts to drive a 60% increase in wallet transactions",
-      "Improved mobile codebase maintainability through architectural guardrails and targeted refactors, reducing release friction and improving delivery velocity by 20%",
+      "Designed and implemented WebSocket-backed stateful onboarding flows for a new game mode, coordinating client state, backend events, and UI updates to drive a 25% increase in user retention.",
+      "Led cross-functional integration of Amazon Pay into the mobile wallet, collaborating with partner teams and product managers to coordinate client changes and backend contracts to drive a 60% increase in wallet transactions.",
+      "Improved codebase maintainability through architectural guardrails and targeted refactors, reducing release friction and improving delivery velocity by 20%.",
     ],
     icon: React.createElement(FaGamepad),
     date: "Dec 2023 - Aug 2024",
@@ -334,32 +340,71 @@ export const experiencesData = [
     title: "Founding Engineer - Mobile & Client Systems",
     location: "Parallel Reality",
     description: [
-      " Founding engineer responsible for end-to-end mobile architecture of an NHS-partnered healthcare platform, leading client systems from initial 0 to 1 development through production scale.",
-      " Built and maintained native Android (Java) and iOS (Swift) applications before leading the migration to a unified Flutter architecture, improving feature parity and significantly reducing long-term development overhead.",
-      " Designed and implemented on-device processing pipelines for real-time exercise tracking, posture assessment, and environment calibration, combining ML-based pose detection with custom mathematical logic and multithreaded execution (multithreading and concurrency) to ensure accuracy and performance on mobile devices",
-      " Built complex, stateful mobile experiences including guided workout flows, timers, and live feedback loops, while ensuring correctness under app lifecycle changes, background execution, and network interruptions.",
-      " Designed and implemented serverless backend APIs and healthcare delivery features (AWS Lambda, MongoDB, VoIP consultations, clinician dashboards), integrating mobile clients with cloud systems and backend services.",
+      "Founding engineer responsible for end-to-end mobile architecture of an NHS-partnered healthcare platform, owning native Android (Java/Kotlin) and iOS (Swift) client systems from 0-to-1 development through production scale.",
+      "Built and maintained native applications, then led the migration to a unified Flutter architecture, improving feature parity and reducing maintenance overhead by 50%.",
+      "Designed and implemented on-device ML pipelines (Computer Vision) for real-time exercise tracking and posture assessment, combining pose detection with multithreading, achieving 30fps at >90% accuracy.",
+      "Built stateful mobile experiences across an exercise library of 100+ exercises, including workout flows, timers, and live feedback loops, ensuring correctness under app lifecycle changes, background execution, and network interruptions.",
+      "Built out new API infrastructure and data pipelines for healthcare delivery features (AWS Lambda, MongoDB, VoIP consultations, clinician dashboards), integrating mobile clients with cloud services and serving 10+ clinics.",
     ],
     icon: React.createElement(FaHospitalUser),
-    date: "Jul 2021 - Dec 2023",
+    date: "Jul 2020 - Dec 2023",
   },
   {
     title: "Full Stack Mobile Developer & Consultant",
     location: "",
     description: [
-      "Delivered 12+ full-stack mobile applications from concept to launch on the App Store and Google Play, accumulating over 150,000+ total downloads",
-      "Enhanced UX and functionality for a portfolio of apps across E-commerce and EdTech, achieving an average 25% improvement in user retention and boosting average app store ratings to 4.7/5 stars",
+      "Delivered 12+ full-stack mobile applications from concept to launch on the App Store and Google Play, accumulating over 150,000+ total downloads.",
+      "Enhanced UX and functionality for a portfolio of apps across E-commerce and EdTech, achieving an average 25% improvement in user retention and boosting average app store ratings to 4.7/5 stars.",
     ],
     icon: React.createElement(FaCode),
-    date: "Jul 2021 - Dec 2023",
-  },
-  {
-    title: "Student Developer",
-    location: "Crio.Do",
-    description: [
-      "Enhanced my knowledge of Linux Commands, OS Concepts, Networking Concepts, REST API, Jackson, Interfaces, Code Refactoring, Gradle, Problem-solving, and a lot more",
-    ],
-    icon: React.createElement(PiStudentFill),
-    date: "Jul 2021 - Dec 2023",
+    date: "Jul 2022 - Sep 2023",
   },
 ] as const satisfies readonly Experience[];
+
+export const projectsData = [
+  {
+    title: "SimplyMime",
+    description: "AI-powered IoT system for real-time gesture recognition to control consumer electronics. Published in IEEE Sensors Journal.",
+    link: "https://ieeexplore.ieee.org/document/10742306",
+    tags: ["Computer Vision", "IoT", "On-device ML", "IEEE"],
+  },
+  {
+    title: "Mental Health AI Testing Framework",
+    description: "LLM-as-judge evaluation framework with A/B testing infrastructure for chatbot models deployed in production mental health AI solutions.",
+    tags: ["LLM", "A/B Testing", "Python", "AI Evaluation"],
+    status: "In Progress",
+  },
+  {
+    title: "Cerebro",
+    description: "Brain-computer interface enabling wheelchair control via EEG signals with real-time signal processing and intent interpretation.",
+    tags: ["EEG", "Real-time Processing", "BCI", "Python"],
+  },
+] as const satisfies readonly ProjectData[];
+
+export const awardsData = [
+  {
+    title: "Hackathon Winner",
+    org: "Junglee Games",
+    year: "2024",
+  },
+  {
+    title: "Top Troubleshooter",
+    org: "Junglee Games",
+    year: "2024",
+  },
+  {
+    title: "Engineering Expo Runner-up",
+    org: "VIT",
+    year: "2018",
+  },
+  {
+    title: "Engineering Expo Winner",
+    org: "VIT",
+    year: "2019",
+  },
+  {
+    title: "Technical Lead",
+    org: "Google Developer Student Club (GDSC)",
+    year: "2020–2022",
+  },
+] as const satisfies readonly AwardData[];
