@@ -379,7 +379,7 @@ export const projectsData = [
     description: "Brain-computer interface enabling wheelchair control via EEG signals with real-time signal processing and intent interpretation.",
     tags: ["EEG", "Real-time Processing", "BCI", "Python"],
   },
-] as const satisfies readonly ProjectData[];
+] satisfies readonly ProjectData[];
 
 export const awardsData = [
   {
