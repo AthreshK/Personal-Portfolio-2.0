@@ -51,7 +51,7 @@ export default function Skills() {
       ref={ref}
       className="max-w-[55rem] scroll-mt-32 text-center"
     > 
-      <SkillSection title="Mobile & Languages" skills={coreExpertise} />
+      <SkillSection title="Core Expertise" skills={coreExpertise} />
       <SkillSection title="Backend & Cloud" skills={proficientWith} />
       <SkillSection title="Systems & Tools" skills={toolsAndMethods} />
     </section>

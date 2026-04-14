@@ -82,7 +82,7 @@ export const displayPictureData = {
 
 export const introData = {
   name: "Athresh Kiran",
-  title: "Mobile Software Engineer & Founding Engineer",
+  title: "Software Engineer & Founding Engineer",
   roleTitle: "Client Systems, Cloud & AI-Powered Platforms",
 } as const satisfies IntroData;
 
@@ -103,7 +103,7 @@ export const socialLinks = [
 
 export const aboutMeData = [
   "I'm a software engineer with over **4 years of experience**, currently pursuing my MS in Computer Science at the University of Washington (graduating June 2026).",
-  "My journey has given me a deep understanding of the full product lifecycle, from **building products from the ground up** to engineering systems for **massive scale**. As a Founding Engineer, I developed a **patent-pending** computer vision algorithm and **architected** the mobile platform for an NHS-partnered healthcare application. Later, at Junglee Games, I owned **high-throughput** client-side payment flows and core product systems supporting an 80M+ user gaming platform, where I honed high-performance engineering in complex, live environments.",
+  "My journey has given me a deep understanding of the full product lifecycle, from **building products from the ground up** to engineering systems for **massive scale**. As a Founding Engineer, I led end-to-end mobile **architecture** for an NHS-partnered healthcare product and designed **on-device ML pipelines** for real-time exercise analysis. Later, at Junglee Games, I owned **high-throughput** client-side payment flows and core product systems supporting an 80M+ user gaming platform, where I honed high-performance engineering in complex, live environments.",
 ] as const satisfies readonly string[];
 
 export const coreExpertise = [
@@ -329,7 +329,7 @@ export const experiencesData = [
     description: [
       "Built and scaled high-traffic Flutter client systems used by 80M+ users, focusing on performance, stability, monitoring, and correctness across Android and iOS.",
       "Owned and implemented client-side architecture for an express payment flow, redesigning transaction state handling and API coordination to reduce end-to-end checkout time by 40%.",
-      "Designed and implemented WebSocket-backed stateful onboarding flows for a new game mode, coordinating client state, backend events, and UI updates to drive a 25% increase in user retention.",
+      "Designed and implemented WebSocket-backed stateful flows for onboarding and a new game mode, coordinating client state, backend events, and UI updates to drive a 25% increase in user retention.",
       "Led cross-functional integration of Amazon Pay into the mobile wallet, collaborating with partner teams and product managers to coordinate client changes and backend contracts to drive a 60% increase in wallet transactions.",
       "Improved codebase maintainability through architectural guardrails and targeted refactors, reducing release friction and improving delivery velocity by 20%.",
     ],
