@@ -19,7 +19,7 @@ export default function PotSettlePrivacyPolicy() {
             PotSettle Privacy Policy
           </h1>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Last updated: July 26, 2026
+            Last updated: August 13, 2026
           </p>
         </header>
 
@@ -37,15 +37,17 @@ export default function PotSettlePrivacyPolicy() {
           <p>
             PotSettle is a session ledger for home poker games: buy-ins,
             cash-outs, settlements, running balances, and personal stats across
-            sessions you host.
+            sessions you host. Signing in with Google is optional and adds
+            cloud backup of your ledger and, separately, in-app purchases to
+            raise seat limits, remove ads, or unlock Premium.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-xl font-semibold">Data stored on your device</h2>
           <p>
-            The following is stored locally in the app&apos;s own database and
-            never leaves your device as part of normal app use:
+            The following is always stored locally in the app&apos;s own
+            database first, regardless of whether you sign in:
           </p>
           <ul className="list-disc space-y-1 pl-5">
             <li>Player names you enter</li>
@@ -54,13 +56,81 @@ export default function PotSettlePrivacyPolicy() {
             <li>Your currency preference and other app settings</li>
           </ul>
           <p>
-            We do not require an account to use PotSettle, and there is no
-            PotSettle server that stores any of the above.
+            PotSettle has no account or server of its own. Where data leaves
+            your device, it goes to the named third-party services below, not
+            to us directly.
           </p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-xl font-semibold">Data sent off your device</h2>
+          <h2 className="text-xl font-semibold">
+            Optional Google Sign-In and cloud backup
+          </h2>
+          <p>
+            Signing in with Google is entirely optional — PotSettle&apos;s core
+            ledger features work fully without it. If you choose to sign in
+            (via Firebase Authentication), we receive your Google account&apos;s
+            name, email address, and profile photo URL to identify your
+            account across devices.
+          </p>
+          <p>
+            If you then use the Backup feature, a copy of your session/ledger
+            data is uploaded to Google Cloud Storage, and a small metadata
+            record (last backup time, app version) is stored in Cloud
+            Firestore — both scoped privately to your account via Firebase
+            security rules, so only you can read or write them. Nothing is
+            uploaded unless you sign in and back up yourself.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">Payments and subscriptions</h2>
+          <p>
+            In-app purchases (raising your seat limit, removing ads, or
+            subscribing to Premium) are processed entirely by Google Play
+            Billing — PotSettle never sees or stores your payment card
+            details. We use RevenueCat, a third-party subscription management
+            platform, to verify and keep your entitlements in sync across
+            devices. RevenueCat receives a purchaser identifier (your Firebase
+            account ID if signed in, otherwise an anonymous device ID) and
+            your purchase/subscription status. See{" "}
+            <a
+              href="https://www.revenuecat.com/privacy"
+              className="underline underline-offset-2 hover:text-gray-600 dark:hover:text-gray-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RevenueCat&apos;s privacy policy
+            </a>
+            .
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">Advertising</h2>
+          <p>
+            PotSettle shows optional ads (Google AdMob) at points such as
+            adding a buy-in or adding a player beyond the free seat limit —
+            watching one is an alternative to purchasing, never a requirement.
+            Purchasing Ad-Free or Premium removes ads entirely. AdMob collects
+            your device&apos;s advertising ID and usage data to serve and
+            measure ads. Where required (e.g. in the EEA/UK), PotSettle shows
+            Google&apos;s consent form (User Messaging Platform) before
+            requesting personalized ads. See{" "}
+            <a
+              href="https://policies.google.com/technologies/ads"
+              className="underline underline-offset-2 hover:text-gray-600 dark:hover:text-gray-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              how Google uses data for advertising
+            </a>
+            .
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">Other data sent off your device</h2>
           <p>
             PotSettle uses Google Firebase for the following, all processed by
             Google on our behalf:
@@ -70,9 +140,7 @@ export default function PotSettlePrivacyPolicy() {
               <strong>Analytics (Firebase Analytics).</strong> Standard
               app-usage events (e.g. app opens, screens viewed) and a small
               number of app-specific events (e.g. when a buy-in is started, when
-              a forced update is shown). Disabled during our own internal
-              development/testing builds; active in the version you install from
-              Google Play.
+              a forced update is shown).
             </li>
             <li>
               <strong>Crash reporting (Firebase Crashlytics).</strong> If the
@@ -113,31 +181,30 @@ export default function PotSettlePrivacyPolicy() {
         <section className="space-y-3">
           <h2 className="text-xl font-semibold">What we don&apos;t do</h2>
           <ul className="list-disc space-y-1 pl-5">
-            <li>No user accounts or sign-in</li>
-            <li>No advertising SDK</li>
-            <li>No in-app purchases or payment processing</li>
+            <li>We don&apos;t sell your data, to anyone, ever</li>
             <li>
               PotSettle does not process real-money transfers between players —
               it only records amounts you enter to help you settle up yourselves
             </li>
             <li>
               No access to your location, camera, contacts, or photos — the app
-              requests only network access, used solely for the Firebase
-              services described above
+              requests only network/internet access and (when ads are shown)
+              your device&apos;s advertising ID
+            </li>
+            <li>
+              Sign-in and cloud backup are opt-in — the app works fully
+              offline without either
             </li>
           </ul>
-          <p>
-            If in-app purchases or ads are introduced in a future version, this
-            policy will be updated before that version is released, and the
-            update will be reflected in the &quot;Last updated&quot; date above.
-          </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-xl font-semibold">Children&apos;s privacy</h2>
           <p>
-            PotSettle is not directed at children under 13, and we do not
-            knowingly collect data from children under 13.
+            PotSettle is not directed at children under 13, is not part of
+            Google Play&apos;s Designed for Families program, and we do not
+            knowingly collect data from children under 13. Ads shown in the
+            app are not targeted at children.
           </p>
         </section>
 
@@ -147,11 +214,18 @@ export default function PotSettlePrivacyPolicy() {
           </h2>
           <p>
             Uninstalling PotSettle, or clearing its data from Android&apos;s App
-            Info screen, immediately removes all locally stored data described
-            above. Because there is no PotSettle account or server, there is no
-            separate account-deletion process. Data sent to Firebase (analytics
-            events, crash reports) is retained according to Google&apos;s
-            standard Firebase retention periods.
+            Info screen, immediately removes all locally stored data.
+          </p>
+          <p>
+            If you signed in, Settings → Delete Account permanently deletes
+            your cloud backup, your Firestore metadata record, and your
+            Firebase Authentication account, and also wipes the app&apos;s
+            local data on that device. Purchase and subscription records are
+            retained by Google Play and RevenueCat according to their own
+            retention policies (standard for financial/tax records) even
+            after account deletion. Analytics and crash-report data already
+            sent to Firebase is retained per Google&apos;s standard Firebase
+            retention periods.
           </p>
         </section>
 
